@@ -1,0 +1,115 @@
+
+
+.navbar-brand{
+    font-size: xx-large;
+}
+
+.nav-item{
+    font-size: x-medium;
+}
+
+.row {
+    margin: 0;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+/*Exibição de envios*/
+#events-container {
+    padding: 50px;
+}
+
+#events-container h2{
+    margin-bottom: 10px;
+}
+
+#events-container .subtitle{
+    color: #1d8c8c;
+    margin-bottom: 40px;
+}
+
+#cards-container {
+    display: flex;
+}
+
+#events-container .card-body {
+    max-width: 19%;
+    border: 1px ;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    padding: 20px;
+    padding-bottom:20px; /*era 55px*/
+    margin: .5%;
+
+}
+
+#events-container img{
+    max-width: 50%;
+    max-height: 125px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: 25%;
+}
+
+#cards-container {
+    position:relative;
+}
+
+.card-body button {
+    align-items:flex-end;
+}
+
+#cards-container img{
+    padding: 5px;
+    height: 375px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-body .card-name{
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #212121;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.customiza{
+    display:flex;
+    justify-content: space-between;
+}
+
+#buttons{
+    text-align: center;
+}
+/*TELA DE USUARIO*/
+
+.user{
+    font-size: 40px;
+}
+
+.useremail{
+    font-size: 20px;
+}
+
+/*DASHBOARD*/
+.dashboard-title-container{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-events-container th{
+    width: 10%;
+}
+
+/*#cards-container .card{
+    flex: 1 1 0;
+    min-width: 18%;
+    max-width: 18%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 10px;
+}*/
