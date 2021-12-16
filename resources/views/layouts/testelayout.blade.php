@@ -34,7 +34,7 @@
 
     </nav>
     </header>
-    <br><center><h1>Você não está logado</h1></center><br>
+    <br><br><center><h1>Bem-vindo ao IF Estudos</h1></center><br>
 
     <center><button class="btn btn-success "><a href="/login"  style="color: white">Fazer login</a></button></center><br>
     
@@ -123,6 +123,11 @@
 
         function alerta(){
           confirm("Deseja mesmo reportar esse envio?");
+          alert("Obrigado! Verificaremos se o envio possui conteúdo inadequado");
+        }
+        
+        function alerta2(){
+          confirm("Deseja mesmo excluir esse envio?");
         }
 
     </script>

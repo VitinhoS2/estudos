@@ -13,7 +13,6 @@ class EstudosController extends Controller
     //PAGINA PRINCIPAL
     public function index(){
         $search=request('search');
-        
         if($search) {
             $envios=Envio::where([
                 ['nome_envio', 'like', '%'.$search.'%']
@@ -76,14 +75,32 @@ class EstudosController extends Controller
     public function gerenciarcrtl(){
         
         $user = auth()->user();
-        $envios = $user->envios;
+        if($user->id==1)
+        {
+            $envios=Envio::all();
+        }
+
+        else
+        {
+            $envios = $user->envios;
+        }
+        
         return view('gerenciar', ['envios'=>$envios, 'user'=>$user]);
+    }
+
+    //VERIFICAR ENVIO
+    public function verificar($id){
+        $envioVerificado=Envio::findOrFail($id);
+        $envioVerificado->report="0";
+        $envioVerificado->save();
+        return redirect('/gerenciar');
     }
 
     //EDITAR ENVIO
     public function edit($id){
         $envios=Envio::findOrFail($id);
-        return view('editar', ['envios'=> $envios]);
+        $user = auth()->user();
+        return view('editar', ['envios'=> $envios, 'user'=>$user]);
     }
 
     public function update(Request $request){

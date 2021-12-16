@@ -32,17 +32,24 @@
                 @foreach($envios as $e)
                     <tr>
                         <th scropt="row">{{$loop->index + 1}}</th>
-                        <td>{{$e->nome_envio}}</td>   
+                        @if($e->report=="1")
+                        <td style="color: red">{{$e->nome_envio}}</td> 
+                        @else 
+                        <td>{{$e->nome_envio}}</td>                         
+                        @endif
                         <td>{{$e->updated_at->format('d/m/Y')}}</td>
                         <td>{{$e->disciplina}}</td>
                         <td>{{$e->descricao}}</td>
-
+                        @if($user->id==1)
+                        <td><a href="/verificar/{{$e->id}}"><button type="submit" class="btn btn-success"> Verificar <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> </button></a></td>
+                        @else
                         <td><a href="/envios/edit/{{$e->id}}" class="btn btn-info edit-btn">Editar <i class="fa fa-pencil"></i> </a> </td>
+                        @endif
                         <td>
                             <form action="/envios/{{$e->id}}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger delete-btn">Excluir <i class="fa fa-trash-o"></i> </button>
+                            <button type="submit" class="btn btn-danger delete-btn" onclick="alerta2()">Excluir <i class="fa fa-trash-o"></i> </button>
                             </form>
                         </td>
                     </tr>
