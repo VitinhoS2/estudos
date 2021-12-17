@@ -75,7 +75,7 @@ class EstudosController extends Controller
     public function gerenciarcrtl(){
         
         $user = auth()->user();
-        if($user->id==1)
+        /*if($user->id==1)
         {
             $envios=Envio::all();
         }
@@ -83,18 +83,18 @@ class EstudosController extends Controller
         else
         {
             $envios = $user->envios;
-        }
-        
+        }*/
+        $envios = $user->envios;
         return view('gerenciar', ['envios'=>$envios, 'user'=>$user]);
     }
 
     //VERIFICAR ENVIO
-    public function verificar($id){
+    /*public function verificar($id){
         $envioVerificado=Envio::findOrFail($id);
         $envioVerificado->report="0";
         $envioVerificado->save();
         return redirect('/gerenciar');
-    }
+    }*/
 
     //EDITAR ENVIO
     public function edit($id){

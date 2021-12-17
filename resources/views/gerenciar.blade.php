@@ -40,9 +40,9 @@
                         <td>{{$e->updated_at->format('d/m/Y')}}</td>
                         <td>{{$e->disciplina}}</td>
                         <td>{{$e->descricao}}</td>
-                        @if($user->id==1)
+                       <!-- @if($user->id==1)
                         <td><a href="/verificar/{{$e->id}}"><button type="submit" class="btn btn-success"> Verificar <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> </button></a></td>
-                        @else
+                        @else-->
                         <td><a href="/envios/edit/{{$e->id}}" class="btn btn-info edit-btn">Editar <i class="fa fa-pencil"></i> </a> </td>
                         @endif
                         <td>
