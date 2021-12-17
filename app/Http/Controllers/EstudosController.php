@@ -88,14 +88,6 @@ class EstudosController extends Controller
         return view('gerenciar', ['envios'=>$envios, 'user'=>$user]);
     }
 
-    //VERIFICAR ENVIO
-    /*public function verificar($id){
-        $envioVerificado=Envio::findOrFail($id);
-        $envioVerificado->report="0";
-        $envioVerificado->save();
-        return redirect('/gerenciar');
-    }*/
-
     //EDITAR ENVIO
     public function edit($id){
         $envios=Envio::findOrFail($id);
