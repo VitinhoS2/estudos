@@ -75,15 +75,6 @@ class EstudosController extends Controller
     public function gerenciarcrtl(){
         
         $user = auth()->user();
-        /*if($user->id==1)
-        {
-            $envios=Envio::all();
-        }
-
-        else
-        {
-            $envios = $user->envios;
-        }*/
         $envios = $user->envios;
         return view('gerenciar', ['envios'=>$envios, 'user'=>$user]);
     }
