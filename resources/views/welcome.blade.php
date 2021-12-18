@@ -7,7 +7,7 @@
 <main>
 <br>
    <div id="events-container" class="col-md-12">
-        <h2>Envies</h2>
+        <h2>Envios</h2>
         @if($search)
             <p class="subtitle">Buscando por: "{{$search}}"</p>
         @elseif($disciplina)
