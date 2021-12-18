@@ -106,7 +106,6 @@ class EstudosController extends Controller
     //APAGAR ENVIO
     public function destroy($id){
         Envio::findOrFail($id)->delete();
-
         return redirect('/gerenciar');
     }
 
