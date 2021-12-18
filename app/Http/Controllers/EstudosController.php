@@ -70,6 +70,29 @@ class EstudosController extends Controller
         $disciplina='';
         return redirect('/');
     }
+    
+    //VERIFICAR ENVIO
+    public function verificar($id){
+        $envioVerificado=Envio::findOrFail($id);
+        $envioVerificado->report="0";
+        $envioVerificado->save();
+        return redirect('/administrar/193419');
+    }
+
+    //ADMINISTRAR ENVIOS
+    public function administrar($senha){
+
+        $user=auth()->user();
+        if($senha==193419){
+            $envios=Envio::all();
+        }
+
+        else{
+            return redirect('/'); 
+        }
+
+        return view('administrar', ['envios'=>$envios, 'user'=>$user]);
+    }
 
     //GERENCIAR PERFIL
     public function gerenciarcrtl(){

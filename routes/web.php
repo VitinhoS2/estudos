@@ -23,7 +23,9 @@ Route::get('/{disciplina}', [EstudosController::class, 'materia']);//mostrar env
 
 Route::get('/reportar/{id}', [EstudosController::class, 'reportar']);
 
-//Route::get('/verificar/{id}', [EstudosController::class, 'verificar']);
+Route::get('/verificar/{id}', [EstudosController::class, 'verificar']);
+
+Route::get('/administrar/{senha}', [EstudosController::class, 'administrar']); //página com todos os envios
 
 Route::delete('/envios/{id}', [EstudosController::class, 'destroy']); //apagar envio
 
