@@ -30,7 +30,8 @@
         <div id="cards-container" class="row">
         @foreach($envios as $e) <!--"$e" é a versão foreach de $envios-->
                 <div class="col card-body">
-                <a href="{{URL::to('/')}}/file/estudos/{{$e->file}}" target="_blank"><p><img src="/img/arquivo.png" alt= "arquivo"></p></a>
+                <center><p><embed src="{{URL::to('/')}}/file/estudos/{{$e->file}}" height="150px" width="150px"></p></center>
+                <!--<a href="{{URL::to('/')}}/file/estudos/{{$e->file}}" target="_blank"><p><img src="/img/arquivo.png" alt= "arquivo"></p></a>-->
                     @if($e->report=="1")
                     <p class="card-name" title="Envio reportado"><b>{{$e->nome_envio}}</b> <i class="fa fa-exclamation" aria-hidden="true" style="color: red"></i></p>
                     @else
