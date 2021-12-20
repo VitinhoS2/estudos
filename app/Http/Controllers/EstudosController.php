@@ -117,7 +117,7 @@ class EstudosController extends Controller
             $requestFile = $request->file;
             $extension = $requestFile->extension();
             $fileName = md5($requestFile) . "." . $extension;
-            $requestFile->move(public_path('file/estudos'), $fileName);
+            $requestFile->move(public_path('img'), $fileName);
             $data['file'] = $fileName;
 
         }
@@ -163,7 +163,7 @@ class EstudosController extends Controller
             $requestFile = $request->file;
             $extension = $requestFile->extension();
             $fileName = md5($requestFile) . "." . $extension;
-            $requestFile->move(public_path('file/estudos'), $fileName);
+            $requestFile->move(public_path('img'), $fileName);
             $envio->file = $fileName;
         }
 

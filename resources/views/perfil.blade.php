@@ -18,7 +18,7 @@
         @foreach($envio as $e) <!--"$e" é a versão foreach de $envios-->
             @if($e->user_id==$userEmail['id'])
                 <div class="card-body">
-                <a href="{{URL::to('/')}}/file/estudos/{{$e->file}}" target="_blank"><p><img src="/img/arquivo.png" alt= "arquivo" width="100"></p></a>
+                <a href="{{URL::to('/')}}/img/{{$e->file}}" target="_blank"><p><img src="/img/arquivo.png" alt= "arquivo" width="100"></p></a>
 
                     @if($e->report=="1")
                     <p class="card-name" title="Envio reportado"><b>{{$e->nome_envio}}</b> <i class="fa fa-exclamation" aria-hidden="true" style="color: red"></i></p>
