@@ -29,7 +29,7 @@
                     <p class="card-date">Data:{{$e->updated_at->format('d/m/Y')}}</p>
                     <p>Disciplina: {{$e->disciplina}}</p>
                     <p>Descrição: {{$e->descricao}}</p>
-                    <a href="{{URL::to('/')}}/file/estudos/{{$e->file}}" target="_blank">
+                    <a href="{{URL::to('/')}}/img/{{$e->file}}" target="_blank">
                     <div id="buttons">
                     <button class="btn btn-success" title="Baixar Envio"><i class="fa fa-download"></i> Baixar Envio</button></a> 
                     <a href="/reportar/{{$e->id}}"><i class="fa fa-exclamation-circle" aria-hidden="true" onclick="alerta()" title="Reportar envio" style="font-size: large; color: red"></i></a>
