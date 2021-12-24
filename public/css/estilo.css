@@ -32,6 +32,7 @@
 
 #cards-container {
     display: flex;
+    overflow: hidden;
 }
 
 #events-container .card-body {
