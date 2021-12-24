@@ -39,7 +39,7 @@
                     <p>Autor: <a href="/perfil/{{$e->id}}" style="color: black">{{$e->nome_usuario}}</a></p>
                     <p class="card-date">Data: {{$e->updated_at->format('d/m/Y')}}</p>
                     <p>Disciplina: {{$e->disciplina}}</p>
-                    <p>Descrição: {{$e->descricao}}</p>
+                    <div class="hidden"><p>Descrição: {{$e->descricao}}</p></div>
                     <a href="{{URL::to('/')}}/img/{{$e->file}}" target="_blank">
                     <div id="buttons">
                     <button class="btn btn-success" title="Baixar Envio"><i class="fa fa-download"></i> Baixar Envio</button></a> 

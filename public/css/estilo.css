@@ -1,4 +1,6 @@
-
+.hidden{
+    overflow: hidden;
+}
 
 .navbar-brand{
     font-size: xx-large;
@@ -32,7 +34,6 @@
 
 #cards-container {
     display: flex;
-    overflow: hidden;
 }
 
 #events-container .card-body {
