@@ -30,7 +30,8 @@
         <div id="cards-container" class="row">
         @foreach($envios as $e) <!--"$e" é a versão foreach de $envios-->
                 <div class="col card-body">
-                <a href="{{URL::to('/')}}/img/{{$e->file}}" target="_blank"><p><img src="/img/arquivo.png" alt= "arquivo"></p></a>
+                <!--<a href="https://if-estudos-bucket.s3.sa-east-1.amazonaws.com/arquivos/{{$e->file}}" target="_blank"><p><img src="/img/arquivo.png" alt= "arquivo"></p></a>-->
+                <a href="/upload/{{$e->id}}" target="_blank"><p><img src="/img/arquivo.png" alt= "arquivo"></p></a>
                     @if($e->report=="1")
                     <p class="card-name" title="Envio reportado"><b>{{$e->nome_envio}}</b> <i class="fa fa-exclamation" aria-hidden="true" style="color: red"></i></p>
                     @else
@@ -40,7 +41,7 @@
                     <p class="card-date">Data: {{$e->updated_at->format('d/m/Y')}}</p>
                     <p>Disciplina: {{$e->disciplina}}</p>
                     <div class="hidden"><p>Descrição: {{$e->descricao}}</p></div>
-                    <a href="{{URL::to('/')}}/img/{{$e->file}}" target="_blank">
+                    <a href="/upload/{{$e->id}}" target="_blank">
                     <div id="buttons">
                     <button class="btn btn-success" title="Baixar Envio"><i class="fa fa-download"></i> Baixar Envio</button></a> 
 

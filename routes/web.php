@@ -11,6 +11,7 @@ Route::post('/registro', [EstudosController::class, 'registrostore']);
 
 Route::get('/upload',[EstudosController::class, 'uploadcrtl']);
 Route::post('/upload',[EstudosController::class, 'uploadstore']); //pode possuir mesmo nome pq é um método diferente
+Route::get('/upload/{id}', [EstudosController::class, 'uploadshow']);
 
 Route::get('/perfil/{user_id}',[EstudosController::class, 'perfilshow']);
 

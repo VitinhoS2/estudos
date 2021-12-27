@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 use App\Models\User;
 use App\Models\Usuario;
@@ -111,15 +112,10 @@ class EstudosController extends Controller
 
     public function update(Request $request){
         $data=$request->all();
-        
-        if($request->hasFile('file') && $request->file('file')->isValid()){
-            
-            $requestFile = $request->file;
-            $extension = $requestFile->extension();
-            $fileName = md5($requestFile) . "." . $extension;
-            $requestFile->move(public_path('img'), $fileName);
-            $data['file'] = $fileName;
 
+        if($request->hasFile('file') && $request->file('file')->isValid()){
+            $path = $request->file(key: 'file')->store(path: 'arquivos', options: 's3'); 
+            $data['file']=$path;
         }
 
         Envio::findOrFail($request->id)->update($data);
@@ -159,12 +155,9 @@ class EstudosController extends Controller
         $envio->user_id = $user->id;
 
         if($request->hasFile('file') && $request->file('file')->isValid()){
-            
-            $requestFile = $request->file;
-            $extension = $requestFile->extension();
-            $fileName = md5($requestFile) . "." . $extension;
-            $requestFile->move(public_path('img'), $fileName);
-            $envio->file = $fileName;
+            $path = $request->file(key: 'file')->store(path: 'arquivos', options: 's3'); 
+            //Storage::disk(name: 's3')->setVisibility($path, visibility: 'public');
+            $envio->file=$path;
         }
 
         $envio->save();
@@ -172,9 +165,23 @@ class EstudosController extends Controller
         
     }
 
+    public function uploadshow($id){
+        $envio= Envio::findOrFail($id);
+        return Storage::disk(name: 's3')->response(path: $envio->file); 
+    }
+
     //VIEWS NÃO USADAS-----------------------
 
     /*
+
+    public function imagecreate(){
+        return view('upload');
+    }
+
+    public function imagestore(Request $request){
+        
+    }
+
         public function registrocrtl(){
             return view('registro');
         }
