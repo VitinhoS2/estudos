@@ -113,10 +113,10 @@ class EstudosController extends Controller
     public function update(Request $request){
         $data=$request->all();
 
-        //if($request->hasFile('file') && $request->file('file')->isValid()){
+        if($request->hasFile('file') && $request->file('file')->isValid()){
             $path = $request->file(key: 'file')->store(path: 'arquivos', options: 's3'); 
             $data['file']=$path;
-        //}
+        }
 
         Envio::findOrFail($request->id)->update($data);
         return redirect('/gerenciar');
