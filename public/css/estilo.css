@@ -1,3 +1,5 @@
+
+
 .hidden{
     overflow: hidden;
 }
@@ -106,6 +108,22 @@
 .dashboard-events-container th{
     width: 10%;
 }
+
+#guest-body{
+    color: white;
+}
+
+.welcome-desc{
+    text-align: center;
+    font-size: larger;
+}
+
+.treco{
+    width: 80px;
+    height: 5px;
+    background: white;
+}
+
 
 /*#cards-container .card{
     flex: 1 1 0;
