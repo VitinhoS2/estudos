@@ -31,7 +31,7 @@
     </header>
     <div style="background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('/img/cinza.jpeg'); no-repeat fixed; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-size: 100% 100%; height: 92vh;" >
     <br><br><br><br><br><br><center><h1>Bem-vindo ao IF Estudos</h1></center><br>
-    <center><p class="treco"></p></center>
+    <center><p class="treco"> </p></center>
     <center><p class="welcome-desc">O IF Estudos é uma plataforma de compartilhamento de material para estudo. <br> Crie uma conta agora e tenha acesso a vários arquivos disponibilizados pelos usuários!</p></center><br>
 
     <center><button class="btn btn-success "><a href="/login"  style="color: white">Fazer login</a></button></center><br>
