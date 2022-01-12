@@ -32,7 +32,7 @@
 
             <div>
                 <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus placeholder="Ex: joaodasilva@gmail.com" />
             </div>
 
             <div class="mt-4">
@@ -49,13 +49,14 @@
 
             <div class="items-center mt-4 customiza">
 
+            <a class="btn btn-outline-success" href="/register">Registrar-se</a>
+
             <button class="btn btn-success">
 
                     {{ __('Entrar') }}
 
                 </button>
 
-            <a class="btn btn-outline-success" href="/register">Registrar-se</a>
 
 
             </div>

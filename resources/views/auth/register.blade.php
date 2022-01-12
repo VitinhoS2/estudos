@@ -30,12 +30,12 @@
 
             <div>
                 <x-jet-label for="name" value="{{ __('Nome') }}" />
-                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" placeholder="Ex: João da Silva"/>
             </div>
 
             <div class="mt-4">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required placeholder="Ex: joaodasilva@gmail.com" />
             </div>
 
             <div class="mt-4">
@@ -67,13 +67,15 @@
 
             <div class="items-center mt-4 customiza">
 
+            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}" style="text-align: left;">
+                    {{ __('Já possui conta?') }}
+                </a>
+
             <button class="btn btn-success">
                     {{ __('Registrar') }}
                 </button>
 
-            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}" style="text-align: left;">
-                    {{ __('Já possui conta?') }}
-                </a>
+
 
 
             </div>

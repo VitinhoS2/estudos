@@ -45,7 +45,7 @@
                     <div id="buttons">
                     <button class="btn btn-success" title="Baixar Envio"><i class="fa fa-download"></i> Baixar Envio</button></a> 
 
-                    <a href="/reportar/{{$e->id}}"><i class="fa fa-exclamation-circle" aria-hidden="true" onclick="alerta()" title="Reportar envio" style="font-size: large; color: red"></i></a>
+                    <a href="/reportar/{{$e->id}}"><i class="fa fa-exclamation-circle" aria-hidden="true" onclick="alerta()" title="Reportar envio - reporte ao administrador do site se você achar que o conteúdo não é adequado para publicação" style="font-size: large; color: red"></i></a>
  
 
                     </div>                    
