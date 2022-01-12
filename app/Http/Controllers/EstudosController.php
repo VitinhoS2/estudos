@@ -16,14 +16,14 @@ class EstudosController extends Controller
         $search=request('search');
         if($search) {
             $envios=Envio::where([
-                ['nome_envio', 'like', '%'.$search.'%']
+                ['nome_envio', 'ILIKE', '%'.$search.'%']
             ])->get();
 
             if(count($envios)==0) {
-                $envios=Envio::where([['disciplina', 'like', '%'.$search.'%']])->get();
+                $envios=Envio::where([['disciplina', 'ILIKE', '%'.$search.'%']])->get();
 
                 if(count($envios)==0) {
-                    $envios=Envio::where([['nome_usuario', 'like', '%'.$search.'%']])->get();
+                    $envios=Envio::where([['nome_usuario', 'ILIKE', '%'.$search.'%']])->get();
                 }
 
             }
