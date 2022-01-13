@@ -37,6 +37,7 @@
 
 #cards-container {
     display: flex;
+    position: relative;
 }
 
 #events-container .card-body {
@@ -44,8 +45,7 @@
     border: 1px ;
     background-color: #eeeeee;
     border-radius: 10px;
-    padding: 20px;
-    padding-bottom:20px; /*era 55px*/
+    padding-bottom:55px; /*era 55px*/
     margin: .5%;
 
 }
@@ -58,13 +58,11 @@
     margin-left: 25%;
 }
 
-#cards-container {
-    position:relative;
-}
-
-.card-body button {
-    align-items:flex-end;
-}
+/*.card-body button.envios {
+    bottom: 15px;
+    position: absolute;
+    right: 29%;
+}*/
 
 #cards-container img{
     padding: 5px;
@@ -88,6 +86,9 @@
 }
 
 #buttons{
+    bottom: 15px;
+    position: absolute;
+    right: 24%;
     text-align: center;
 }
 /*TELA DE USUARIO*/

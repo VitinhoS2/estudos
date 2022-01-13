@@ -16,14 +16,14 @@ class EstudosController extends Controller
         $search=request('search');
         if($search) {
             $envios=Envio::where([
-                ['nome_envio', 'ILIKE', '%'.$search.'%']
+                ['nome_envio', 'ILIKE', '%'.$search.'%']//"ILIKE" é para postgress ser case insensitive ou seja funciona no heroku mas não funciona no local
             ])->get();
 
             if(count($envios)==0) {
-                $envios=Envio::where([['disciplina', 'ILIKE', '%'.$search.'%']])->get();
+                $envios=Envio::where([['disciplina', 'ILIKE', '%'.$search.'%']])->get(); //"ILIKE" é para postgress ser case insensitive ou seja funciona no heroku mas não funciona no local
 
                 if(count($envios)==0) {
-                    $envios=Envio::where([['nome_usuario', 'ILIKE', '%'.$search.'%']])->get();
+                    $envios=Envio::where([['nome_usuario', 'ILIKE', '%'.$search.'%']])->get();//"ILIKE" é para postgress ser case insensitive ou seja funciona no heroku mas não funciona no local
                 }
 
             }
