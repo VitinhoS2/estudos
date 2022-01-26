@@ -67,7 +67,7 @@
         <a class="nav-link" href="/upload">Realizar um envio</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/gerenciar">Gerenciar envios</a>
+        <a class="nav-link" href="/gerenciar">Gerenciar envios </a>
       </li>
 
       <li class="nav-item active dropdown">
