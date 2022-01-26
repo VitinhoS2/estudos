@@ -66,7 +66,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="/upload">Realizar um envio</a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="/gerenciar">Gerenciar envios</a>
       </li>
 
