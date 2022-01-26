@@ -42,7 +42,7 @@
                                 <div class="form-group row">
                                     <label for="user_name" class="col-md-4 col-form-label text-md-right">Descrição</label>
                                     <div class="col-md-6">
-                                        <textarea id="descricao" class="form-control" name="descricao"></textarea><br>
+                                        <textarea id="descricao" class="form-control" name="descricao" required></textarea><br>
                                     </div>
                                 </div>
 
